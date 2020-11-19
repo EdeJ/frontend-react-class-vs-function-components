@@ -2,10 +2,19 @@ import React from 'react';
 import './App.css';
 
 function App() {
+  const [isLightOn, toggleIsLightOn] = React.useState(true);
+
+  function handleClick() {
+    toggleIsLightOn(!isLightOn);
+  }
+
   return (
-    <div>
-      Schrijf hier jouw functie-component!
-    </div>
+    <button
+      type="button"
+      onClick={handleClick}
+    >
+      {isLightOn ? 'AAN' : 'UIT'}
+    </button>
   );
 }
 
